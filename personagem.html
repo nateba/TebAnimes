@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personagem</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Oxanium:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap"rel="stylesheet'>
+    <script src="https://kit.fontawesome.com/0c3e63dbc1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-lg"
+                        style="background-image: radial-gradient(circle, #ca5757, #d8882c);">
+
+                        <div class="col-4">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="images/logoteba.png" alt="logoteba" width="240" height="55">
+                            </a>
+                        </div>
+
+
+
+
+                        <div class="col-8">
+                            <div id="links">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                                    <a class="nav-link active " href="index.html#secaoAnimes">My Animes</a>
+                                    <a class="nav-link active" href="index.html#tituloRank">Rank</a>
+
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle active" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            Characters
+
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item"
+                                                    href="personagem.html?id=2910&id2=85&id3=14&certo=2910">Naruto</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="personagem.html?id=40&id2=62&id3=727&certo=40">One Piece</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="personagem.html?id=80&id2=835&id3=75&certo=80">Death Note</a>
+                                            </li>
+                                            <li>
+                                            <li><a class="dropdown-item"
+                                                    href="personagem.html?id=40882&id2=46490&id3=45627&certo=40882">Attack
+                                                    on Titan</a></li>
+                                            <li>
+                                            <li><a class="dropdown-item"
+                                                    href="personagem.html?id=30&id2=27&id3=31&certo=30">HunterxHunter</a>
+                                            </li>
+                                            <li>
+                                            <li><a class="dropdown-item"
+                                                    href="personagem.html?id=117909&id2=118489&id3=117911&certo=117909">Boku
+                                                    no Hero</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a class="dropdown-item" href="index.html#personagens">Todos</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="col-4">
+                            <div class="search-box">
+                                <input class="search-txt" type="text" name="" placeholder="Pesquisar">
+                                <a class="pesquisa-btn" href="#">
+                                    <i class="fas fa-search fa-2xl" style="color: black;"></i>
+                                </a>
+                            </div>
+                        </div>
+
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </header>
+
+    <main>
+        <div id="areapersonagens">
+
+            <section id="seletor-personagem">
+                <li class="personagem">
+                    <div id="p1">
+
+                    </div>
+                    <div id="p2">
+
+                    </div>
+                    <div id="p3">
+
+                    </div>
+                </li>
+            </section>
+
+            <section id="personagem-selecionado">
+                <img class="personagem-grande" src="./images/card-obitoimg1.jpg" alt="">
+                <p id="quote" class="quote">
+
+                </p>
+            </section>
+
+            <section id="seletor-quote">
+                <div id="b1" class="selecionar">
+                    <h2>1</h2>
+                </div>
+                <div id="b2" class="selecionar">
+                    <h2>2</h2>
+                </div>
+                <div id="b3" class="selecionar">
+                    <h2>3</h2>
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+    <script>
+
+        const imagemPersonagemGrande = document.querySelector('.personagem-grande');
+
+        const imagens = {
+            2910: 'card-obitoimg1.jpg',
+            85: 'card-kkshimg1.jpg',
+            14: 'card-itachiimg1.jpg',
+            40: 'card-luffyimg1.jpg',
+            62: 'card-zoroimg1.jpg',
+            727: 'card-shanksimg1.jpg',
+            80: 'card-lightimg1.jpg',
+            835: 'card-misaimg1.jpg',
+            75: 'card-ryukimg1.jpg',
+            40882: 'card-erenimg1.jpg',
+            46490: 'card-annieimg1.jpg',
+            45627: 'card-leviimg1.jpg',
+            30: 'card-gonimg1.jpg',
+            27: 'card-killuaimg1.jpg',
+            31: 'card-hisokaimg1.jpg',
+            117909: 'card-izukuimg1.jpg',
+            118489: 'card-todorokiimg1.jpg',
+            117911: 'card-bakugoimg1.jpg'
+        }
+
+        const dicionario = {
+            2910: 'obito',
+            85: 'kakashi',
+            14: 'itachi',
+            40: 'luffy',
+            62: 'zoro',
+            727: 'shanks',
+            80: 'light',
+            835: 'misa amane',
+            75: 'ryuk',
+            40882: 'eren jaeger',
+            46490: 'annie',
+            45627: 'levi',
+            30: 'gon',
+            27: 'killua',
+            31: 'hisoka',
+            117909: 'Midoriya Izuku',
+            118489: 'Shoto Todoroki',
+            117911: 'Bakugou Katsuki',
+        }
+
+        function limitarDescricao(string, tamanhoMax) {
+            if (string.length <= tamanhoMax) {
+                return string;
+            } else {
+                return string.slice(0, tamanhoMax) + '...';
+            }
+        }
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const certo = urlParams.get('certo');
+        const id = urlParams.get('id');
+        const id2 = urlParams.get('id2');
+        const id3 = urlParams.get('id3');
+
+        const vetor = [id, id2, id3];
+        const vetor2 = ['p1', 'p2', 'p3'];
+
+        const frases = [];
+
+        for (let i = 0; i < vetor.length; i++) {
+            fetch(`https://api.jikan.moe/v4/characters/${vetor[i]}/full`)
+                .then((response) => response.json())
+                .then(resposta => {
+                    let str = ''
+                    str += `<ul>
+                        <li><img src="${resposta.data.images.jpg.image_url}" alt=""></li>
+                        <li>
+                            <h2>${resposta.data.name}</h2>
+                            <p>${limitarDescricao(resposta.data.about, 400)}</p>
+                        </li>
+                    </ul>`
+                    if (vetor[i] == certo) {
+                        document.getElementById(`${vetor2[i]}`).classList.add('yes');
+                        imagemPersonagemGrande.src = `./images/${imagens[vetor[i]]}`;
+                    }
+                    document.getElementById(`${vetor2[i]}`).innerHTML = str;
+                    fetch(`https://animechan.xyz/api/quotes/character?name=${dicionario[vetor[i]]}`)
+                        .then((response) => response.json())
+                        .then(resposta2 => {
+
+                            for (let j = 0; j < 3; j++) {
+                                let quotinha = resposta2[j].quote
+                                frases.push(quotinha)
+                            }
+                            let str2 = ''
+                            str2 += `<p></p>`
+                            document.getElementById('quote').innerHTML = str2;
+                        });
+                });
+        }
+
+        const p1 = document.getElementById('p1');
+
+        p1.addEventListener('click', () => {
+
+            removerSelecaoPersonagem()
+
+            p1.classList.add('yes');
+            p1.classList.add('clicado');
+            p2.classList.remove('clicado');
+            p3.classList.remove('clicado');
+            const imagemPersonagemGrande = document.querySelector('.personagem-grande');
+
+            imagemPersonagemGrande.src = `./images/${imagens[vetor[0]]}`;
+
+            const quotePersonagem = document.getElementById('quote');
+            quotePersonagem.innerHTML = frases[0];
+
+            const botao1 = document.getElementById('b1');
+            const botao2 = document.getElementById('b2');
+            const botao3 = document.getElementById('b3');
+
+            if (botao1.addEventListener('mouseover', () => {
+                quotePersonagem.innerHTML = frases[0];
+            })) {
+                console.log(1);
+            } else if (botao2.addEventListener('mouseover', () => {
+                quotePersonagem.innerHTML = frases[1];
+            })) {
+                console.log(2);
+            } else if (botao3.addEventListener('mouseover', () => {
+                quotePersonagem.innerHTML = frases[2];
+            })) {
+                console.log(3);
+            }
+        })
+
+        const p2 = document.getElementById('p2');
+
+        p2.addEventListener('click', () => {
+
+            removerSelecaoPersonagem()
+
+            p2.classList.add('yes');
+            p2.classList.add('clicado');
+            p1.classList.remove('clicado');
+            p3.classList.remove('clicado');
+            const imagemPersonagemGrande = document.querySelector('.personagem-grande');
+
+            imagemPersonagemGrande.src = `./images/${imagens[vetor[1]]}`;
+
+            const quotePersonagem = document.getElementById('quote');
+            quotePersonagem.innerHTML = frases[3];
+
+            const botao1 = document.getElementById('b1');
+            const botao2 = document.getElementById('b2');
+            const botao3 = document.getElementById('b3');
+
+            if (botao1.addEventListener('mouseover', () => {
+                quotePersonagem.innerHTML = frases[3];
+            })) {
+                console.log(1);
+            } else if (botao2.addEventListener('mouseover', () => {
+                quotePersonagem.innerHTML = frases[4];
+            })) {
+                console.log(2);
+            } else if (botao3.addEventListener('mouseover', () => {
+                quotePersonagem.innerHTML = frases[5];
+            })) {
+                console.log(3);
+            }
+
+        })
+
+        const p3 = document.getElementById('p3');
+
+        p3.addEventListener('click', () => {
+
+            removerSelecaoPersonagem()
+
+            p3.classList.add('yes');
+            p3.classList.add('clicado');
+            p1.classList.remove('clicado');
+            p2.classList.remove('clicado');
+
+            const imagemPersonagemGrande = document.querySelector('.personagem-grande');
+
+            imagemPersonagemGrande.src = `./images/${imagens[vetor[2]]}`;
+
+            const quotePersonagem = document.getElementById('quote');
+            quotePersonagem.innerHTML = frases[6];
+
+            const botao1 = document.getElementById('b1');
+            const botao2 = document.getElementById('b2');
+            const botao3 = document.getElementById('b3');
+
+            if (botao1.addEventListener('mouseover', () => {
+                quotePersonagem.innerHTML = frases[6];
+            })) {
+                console.log(1);
+            } else if (botao2.addEventListener('mouseover', () => {
+                quotePersonagem.innerHTML = frases[7];
+            })) {
+                console.log(2);
+            } else if (botao3.addEventListener('mouseover', () => {
+                quotePersonagem.innerHTML = frases[8];
+            })) {
+                console.log(3);
+            }
+        })
+
+        function removerSelecaoPersonagem() {
+            const personagemSelecionado = document.querySelector('.yes');
+            personagemSelecionado.classList.remove('yes');
+        }
+
+
+    </script>
+</body>
+
+</html>

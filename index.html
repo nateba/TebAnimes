@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TebAnimes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Oxanium:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap"rel="stylesheet'>
+    <script src="https://kit.fontawesome.com/0c3e63dbc1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-lg"
+                        style="background-image: radial-gradient(circle, #ca5757, #d8882c);">
+
+                        <div class="col-4">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="images/logoteba.png" alt="logoteba" width="240" height="55">
+                            </a>
+                        </div>
+
+
+
+
+                        <div class="col-8">
+                            <div id="links">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                                    <a class="nav-link active " href="#secaoAnimes">My Animes</a>
+                                    <a class="nav-link active" href="#tituloRank">Rank</a>
+
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle active" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            Characters
+
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item"
+                                                    href="personagem.html?id=2910&id2=85&id3=14&certo=2910">Naruto</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="personagem.html?id=40&id2=62&id3=727&certo=40">One Piece</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="personagem.html?id=80&id2=835&id3=75&certo=80">Death Note</a>
+                                            </li>
+                                            <li>
+                                            <li><a class="dropdown-item"
+                                                    href="personagem.html?id=40882&id2=46490&id3=45627&certo=40882">Attack
+                                                    on Titan</a></li>
+                                            <li>
+                                            <li><a class="dropdown-item"
+                                                    href="personagem.html?id=30&id2=27&id3=31&certo=30">HunterxHunter</a>
+                                            </li>
+                                            <li>
+                                            <li><a class="dropdown-item"
+                                                    href="personagem.html?id=117909&id2=118489&id3=117911&certo=117909">Boku
+                                                    no Hero</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a class="dropdown-item" href="index.html#personagens">Todos</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="col-4">
+                            <div class="search-box">
+                                <input class="search-txt" type="text" name="" placeholder="Pesquisar">
+                                <a class="pesquisa-btn" href="#">
+                                    <i class="fas fa-search fa-2xl" style="color: black;"></i>
+                                </a>
+                            </div>
+                        </div>
+
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </header>
+
+    <main>
+        <div class="containerAnimes">
+            <h1 id="secaoAnimes">Watched Anime</h1>
+            <div class="secaoAnimes">
+                <div id="tela">
+                    <!-- Cards dos animes -->
+                </div>
+
+            </div>
+        </div>
+        <h1 id="tituloRank">My Rank</h1>
+        <div class="subTitulos">
+            <h2 class="t1">The Big three</h2>
+            <h2 class="t2">Honorable Mentions</h2>
+        </div>
+        <section id="todosfavs">
+            <div id="body2">
+                <div class="app">
+
+                    <div class="cardList">
+                        <button class="cardList__btn btn btn--left">
+                            <div class="icon">
+                                <svg>
+                                    <use xlink:href="#arrow-left"></use>
+                                </svg>
+                            </div>
+                        </button>
+
+                        <div class="cards__wrapper">
+                            <div class="card current--card" data-audiopath="/audios/narutomp3.mp3">
+                                <div class="card__image">
+                                    <img src="./images/narutofavs.jpg" alt="" />
+                                </div>
+                            </div>
+
+                            <div class="card next--card" data-audiopath="/audios/opmp3.mp3">
+                                <div class="card__image">
+                                    <img src="./images/onepiecefav.jpg" alt="" />
+                                </div>
+                            </div>
+
+                            <div class="card previous--card" data-audiopath="/audios/deathmp3.mp3">
+                                <div class="card__image">
+                                    <img src="./images/deathfav.jpg" alt="" />
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <button class="cardList__btn btn btn--right">
+                            <div class="icon">
+                                <svg>
+                                    <use xlink:href="#arrow-right"></use>
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+
+                    <div class="infoList">
+                        <div class="info__wrapper">
+                            <div class="info current--info">
+                                <h1 class="text name">NARUTO</h1>
+
+                            </div>
+
+                            <div class="info next--info">
+                                <h1 class="text name">One Piece</h1>
+
+
+                            </div>
+
+                            <div class="info previous--info">
+
+                                <h1 class="text name">Death Note</h1>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="app__bg">
+                        <div class="app__bg__image current--image">
+                            <img src="./images/capa2naruto.jpg" alt="" />
+                        </div>
+                        <div class="app__bg__image next--image">
+                            <img src="./images/capaOP.jpg" alt="" />
+                        </div>
+                        <div class="app__bg__image previous--image">
+                            <img src="./images/deathnotecapa.jpg" alt="" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="loading__wrapper">
+                    <div class="loader--text">Loading...</div>
+                    <div class="loader">
+                        <span></span>
+                    </div>
+                </div>
+
+
+                <svg class="icons" style="display: none;">
+                    <symbol id="arrow-left" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+                        <polyline points='328 112 184 256 328 400'
+                            style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+                    </symbol>
+                    <symbol id="arrow-right" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+                        <polyline points='184 112 328 256 184 400'
+                            style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+                    </symbol>
+                </svg>
+
+
+            </div>
+            <div id="cardinhoins">
+                <div class="flip-card-container" data-audiopath="/audios/Shingekimp3.mp3" style="--hue: 211">
+                    <div class="flip-card">
+
+                        <div class="card-front">
+                            <figure>
+                                <div class="img-bg"></div>
+                                <img src="./images/olho1.jpg" alt="Image 2">
+                                <h1 class="front">1</h1>
+                            </figure>
+
+
+                        </div>
+
+                        <div class="card-back">
+                            <figure>
+                                <div class="img-bg"></div>
+                                <figcaption>Shingeki no Kyojin</figcaption>
+                            </figure>
+
+                            <button id="but2"
+                                onclick="window.location.href = 'personagem.html?id=40882&id2=46490&id3=45627&certo=40882'">Discover</button>
+
+                            <div class="design-container">
+                                <span class="design design--1"></span>
+                                <span class="design design--2"></span>
+                                <span class="design design--3"></span>
+                                <span class="design design--4"></span>
+                                <span class="design design--5"></span>
+                                <span class="design design--6"></span>
+                                <span class="design design--7"></span>
+                                <span class="design design--8"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="flip-card-container" data-audiopath="/audios/hunterxhuntermp3.mp3" style="--hue: 350">
+                    <div class="flip-card">
+
+                        <div class="card-front">
+                            <figure>
+                                <div class="img-bg"></div>
+                                <img src="./images/olho2.jpg" alt="Brohm Lake">
+
+                                <h1 class="front">2</h1>
+                            </figure>
+
+
+                        </div>
+
+                        <div class="card-back"
+                            style="background-image: linear-gradient(to right, #ca5757 25%, #3d414d 50%, #000500 70%);">
+                            <!-- only if the image is necessary -->
+                            <figure>
+                                <div class="img-bg"></div>
+                                <figcaption>HunterxHunter</figcaption>
+                            </figure>
+
+                            <button id="but2"
+                                onclick="window.location.href = 'personagem.html?id=30&id2=27&id3=31&certo=30'">Discover</button>
+
+                            <!-- can add svg here and remove these eight spans -->
+                            <div class="design-container">
+                                <span class="design design--1"></span>
+                                <span class="design design--2"></span>
+                                <span class="design design--3"></span>
+                                <span class="design design--4"></span>
+                                <span class="design design--5"></span>
+                                <span class="design design--6"></span>
+                                <span class="design design--7"></span>
+                                <span class="design design--8"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="flip-card-container" data-audiopath="/audios/bokunoheromp3.mp3" style="--hue: 211">
+                    <div class="flip-card">
+
+                        <div class="card-front">
+                            <figure>
+                                <div class="img-bg"></div>
+                                <img src="./images/olho3.jpg" alt="Image 2">
+                                <h1 class="front">3</h1>
+
+                            </figure>
+
+
+                        </div>
+
+                        <div class="card-back">
+                            <figure>
+                                <div class="img-bg"></div>
+                                <figcaption>Boku no Hero</figcaption>
+                            </figure>
+
+                            <button id="but2"
+                                onclick="window.location.href = 'personagem.html?id=117909&id2=118489&id3=117911&certo=117909'">Discover</button>
+
+
+                            <div class="design-container">
+                                <span class="design design--1"></span>
+                                <span class="design design--2"></span>
+                                <span class="design design--3"></span>
+                                <span class="design design--4"></span>
+                                <span class="design design--5"></span>
+                                <span class="design design--6"></span>
+                                <span class="design design--7"></span>
+                                <span class="design design--8"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="flip-card-container" data-audiopath="/audios/demonmp3.mp3" style="--hue: 350">
+                    <div class="flip-card">
+
+                        <div class="card-front">
+                            <figure>
+                                <div class="img-bg"></div>
+                                <img src="./images/olho4.jpg" alt="Brohm Lake">
+                                <h1 class="front">4</h1>
+
+                            </figure>
+
+
+                        </div>
+
+                        <div class="card-back"
+                            style="background-image: linear-gradient(to right, #ca5757 25%, #3d414d 50%, #000500 70%);">
+                            <!-- only if the image is necessary -->
+                            <figure>
+                                <div class="img-bg"></div>
+                                <figcaption>Kimetsu no Yaiba</figcaption>
+                            </figure>
+
+                            <button id="but2"
+                                onclick="window.location.href = 'https://www.google.com/search?q=Kimetsu+no+Yaiba'">Discover</button>
+
+                            <!-- can add svg here and remove these eight spans -->
+                            <div class="design-container">
+                                <span class="design design--1"></span>
+                                <span class="design design--2"></span>
+                                <span class="design design--3"></span>
+                                <span class="design design--4"></span>
+                                <span class="design design--5"></span>
+                                <span class="design design--6"></span>
+                                <span class="design design--7"></span>
+                                <span class="design design--8"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="flip-card-container" data-audiopath="/audios/yournamemp3.mp3" style="--hue: 211">
+                    <div class="flip-card">
+
+                        <div class="card-front">
+                            <figure>
+                                <div class="img-bg"></div>
+                                <img src="./images/olho5.jpg" alt="Image 2">
+                                <h1 class="front">5</h1>
+                            </figure>
+
+
+                        </div>
+
+                        <div class="card-back">
+                            <figure>
+                                <div class="img-bg"></div>
+                                <figcaption>Your Name</figcaption>
+                            </figure>
+
+                            <button id="but2"
+                                onclick="window.location.href = 'https://www.google.com/search?q=Your+Name'">Discover</button>
+
+                            <div class="design-container">
+                                <span class="design design--1"></span>
+                                <span class="design design--2"></span>
+                                <span class="design design--3"></span>
+                                <span class="design design--4"></span>
+                                <span class="design design--5"></span>
+                                <span class="design design--6"></span>
+                                <span class="design design--7"></span>
+                                <span class="design design--8"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <h2 class="characters">Favorite Characters</h2>
+        <div id="personagens">
+            <div class="section">
+                <div class="section-header">
+                    <h2>Naruto</h2>
+                    <span>&#9660;</span>
+                </div>
+                <div class="section-content">
+                    <a href="personagem.html?id=2910&id2=85&id3=14&certo=2910">
+                        <div class="personagemFav">
+                            <img src="https://cdn.myanimelist.net/images/characters/14/337810.jpg" alt="">
+                            <h3>Obito</h3>
+                        </div>
+                    </a>
+
+                    <a href="personagem.html?id=2910&id2=85&id3=14&certo=85">
+                        <div class="personagemFav">
+                            <img src="https://cdn.myanimelist.net/images/characters/9/241385.jpg" alt="">
+                            <h3>Kakashi</h3>
+                        </div>
+                    </a>
+
+                    <a href="personagem.html?id=2910&id2=85&id3=14&certo=14">
+                        <div class="personagemFav">
+                            <img src="https://cdn.myanimelist.net/images/characters/11/421988.jpg" alt="">
+                            <h3>Itachi</h3>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header">
+                    <h2>One Piece</h2>
+                    <span>&#9660;</span>
+                </div>
+                <div class="section-content">
+                    <a href="personagem.html?id=40&id2=62&id3=727&certo=40">
+                        <div class="personagemFav">
+                            <img src="https://cdn.myanimelist.net/images/characters/5/315343.jpg" alt="">
+                            <h3>Luffy</h3>
+                        </div>
+                    </a>
+                    <a href="personagem.html?id=40&id2=62&id3=727&certo=62">
+                        <div class="personagemFav">
+                            <img src="https://cdn.myanimelist.net/images/characters/12/391978.jpg" alt="">
+                            <h3>Zoro</h3>
+                        </div>
+                    </a>
+                    <a href="personagem.html?id=40&id2=62&id3=727&certo=727">
+                        <div class="personagemFav">
+                            <img src="https://cdn.myanimelist.net/images/characters/10/434870.jpg" alt="">
+                            <h3>Shanks</h3>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header">
+                    <h2>Death Note</h2>
+                    <span>&#9660;</span>
+                </div>
+                <div class="section-content">
+                    <a href="personagem.html?id=80&id2=835&id3=75&certo=80">
+                        <div class="personagemFav">
+                            <img src="https://cdn.myanimelist.net/images/characters/4/323950.jpg" alt="">
+                            <h3>Light</h3>
+                        </div>
+                    </a>
+                    <a href="personagem.html?id=80&id2=835&id3=75&certo=835">
+                        <div class="personagemFav">
+                            <img src="https://cdn.myanimelist.net/images/characters/15/96320.jpg" alt="">
+                            <h3>Misa</h3>
+                        </div>
+                    </a>
+                    <a href="personagem.html?id=80&id2=835&id3=75&certo=75">
+                        <div class="personagemFav">
+                            <img src="https://cdn.myanimelist.net/images/characters/5/61354.jpg" alt="">
+                            <h3>Ryuk</h3>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header">
+                    <h2>Atack on Titan</h2>
+                    <span>&#9660;</span>
+                </div>
+                <div class="section-content">
+                    <a href="personagem.html?id=40882&id2=46490&id3=45627&certo=40882">
+                        <div class="personagemFav">
+                            <img src="https://cdn.myanimelist.net/images/characters/12/487557.jpg" alt="">
+                            <h3>Eren</h3>
+                        </div>
+                    </a>
+                    <a href="personagem.html?id=40882&id2=46490&id3=45627&certo=46490">
+                        <div class="personagemFav">
+                            <img src="https://cdn.myanimelist.net/images/characters/9/249113.jpg" alt="">
+                            <h3>Annie</h3>
+                        </div>
+                    </a>
+                    <a href="personagem.html?id=40882&id2=46490&id3=45627&certo=45627">
+                        <div class="personagemFav">
+                            <img src="https://cdn.myanimelist.net/images/characters/4/364456.jpg" alt="">
+                            <h3>Levi</h3>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header">
+                    <h2>Hunter x Hunter</h2>
+                    <span>&#9660;</span>
+                </div>
+                <div class="section-content">
+                    <a href="personagem.html?id=30&id2=27&id3=31&certo=30">
+                        <div class="personagemFav">
+                            <img src="https://cdn.myanimelist.net/images/characters/3/322748.jpg" alt="">
+                            <h3>Gon</h3>
+                        </div>
+                    </a>
+                    <a href="personagem.html?id=30&id2=27&id3=31&certo=27">
+                        <div class="personagemFav">
+                            <img src="https://cdn.myanimelist.net/images/characters/11/477569.jpg" alt="">
+                            <h3>Killua</h3>
+                        </div>
+                    </a>
+                    <a href="personagem.html?id=30&id2=27&id3=31&certo=31">
+                        <div class="personagemFav">
+                            <img src="https://cdn.myanimelist.net/images/characters/4/141265.jpg" alt="">
+                            <h3>Hisoka</h3>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header">
+                    <h2>Boku no Hero</h2>
+                    <span>&#9660;</span>
+                </div>
+                <div class="section-content">
+                    <a href="personagem.html?id=117909&id2=118489&id3=117911&certo=117909">
+                        <div class="personagemFav">
+                            <img src="https://cdn.myanimelist.net/images/characters/10/314555.jpg" alt="">
+                            <h3>Izuku</h3>
+                        </div>
+                    </a>
+                    <a href="personagem.html?id=117909&id2=118489&id3=117911&certo=118489">
+                        <div class="personagemFav">
+                            <img src="https://cdn.myanimelist.net/images/characters/5/476902.jpg" alt="">
+                            <h3>Todoroki</h3>
+                        </div>
+                    </a>
+                    <a href="personagem.html?id=117909&id2=118489&id3=117911&certo=117911">
+                        <div class="personagemFav">
+                            <img src="https://cdn.myanimelist.net/images/characters/12/299406.jpg" alt="">
+                            <h3>Bakugo</h3>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </main>
+
+
+    <footer>
+
+    </footer>
+    <script src='https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js'></script>
+    <script src="script.js"></script>
+    <script src="scriptAudio.js"></script>
+    <script src="index.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sectionHeaders = document.querySelectorAll(".section-header");
+
+            sectionHeaders.forEach(function (header) {
+                header.addEventListener("click", function () {
+                    const sectionContent = this.nextElementSibling;
+                    sectionContent.classList.toggle("expanded");
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
